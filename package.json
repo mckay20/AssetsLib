@@ -1,0 +1,19 @@
+{
+    "version": "0.1.0",
+    "name": "com.capdev8.assetslib",
+    "cordova_name": "AssetsLib",
+    "description": "Cordova plugin for accessing assets from iOS and Android",
+    "license": "MIT",
+    "keywords": [
+        "cordova",
+        "phonegap",
+        "assets",
+        "assetslib",
+        "thumbnails"
+    ],
+    "platforms": [
+        "ios",
+        "android"
+    ],
+    "engines": []
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+		id="com.capdev8.assetslib"
+    	version="0.1.0">
+    <name>AssetsLib</name>
+    <description>Cordova plugin for accessing assets from iOS and Android</description>
+    <license>MIT</license>
+    <author>glowmar</author>
+    <keywords>cordova,phonegap,assets,assetslib,thumbnails</keywords>
+
+    <js-module src="www/assetslib.js" name="AssetsLib">
+        <clobbers target="window.navigator.assetslib" />
+    </js-module>
+    
+    <!-- ios -->
+    <platform name="ios">    
+        <config-file target="config.xml" parent="/*">
+            <feature name="AssetsLib">
+                <param name="ios-package" value="AssetsLib" /> 
+            </feature>
+        </config-file>
+        <header-file src="src/ios/AssetsLib.h" />
+        <source-file src="src/ios/AssetsLib.m" />
+
+        <framework src="AssetsLibrary.framework"/>
+        <framework src="CoreLocation.framework"/>
+    </platform>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AssetLib">
+                <param name="android-package" value="com.capdev8.assetslib.AssetsLib" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+            <feature name="http://api.phonegap.com/1.0/file" />
+        </config-file>
+        <source-file src="src/android/Alert.java" target-dir="src/com/assetslib" />
+    </platform>
+</plugin>
+
