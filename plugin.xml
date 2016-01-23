@@ -37,7 +37,7 @@
             <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
             <feature name="http://api.phonegap.com/1.0/file" />
         </config-file>
-        <source-file src="src/android/Alert.java" target-dir="src/com/assetslib" />
+        <source-file src="src/android/AssetsLib.java" target-dir="src/com/assetslib" />
     </platform>
 </plugin>
 
