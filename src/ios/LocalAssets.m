@@ -1,10 +1,3 @@
-//
-//  AssetsLib.m
-//
-//  Created by glowmar on 12/27/13.
-//
-//
-
 #import "LocalAssets.h"
 #import "AssetsLibrary/ALAssetsLibrary.h"
 #import "AssetsLibrary/ALAssetsFilter.h"
@@ -15,7 +8,7 @@
 @import Photos;
 
 
-@interface AssetsLib ()
+@interface LocalAssets ()
 
 @property (nonatomic, strong) ALAssetsLibrary *assetsLibrary;
 @property (nonatomic, strong) NSMutableArray *groups;
@@ -26,7 +19,7 @@
 @end
 
 
-@implementation AssetsLib
+@implementation LocalAssets
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
