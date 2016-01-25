@@ -88,23 +88,6 @@ onGetAllPhotosError:function(error){
 }
 ```
 
-To get one or more metadata for a list of asset id's:
-
-```javascript
-getPhotoMetadata:function(idList, successCallback, errorCallback){
-  if (navigator.localassets) {
-    navigator.localassets.getPhotoMetadata(idList, this.onGetPhotoMetadataSuccess, this.onGetPhotoMetadataError);
-  }
-},
-onGetPhotoMetadataSuccess:function(data){
-  this.thumbnails = data;
-  alert("onGetPhotoMetadataSuccess\n" + data.length);
-},
-onGetPhotoMetadataError:function(error){
-  console.error("onGetPhotoMetadataError > " + error);
-}
-```
-
 To get one or more thumbnails for a list of asset url's:
 
 ```javascript
