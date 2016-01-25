@@ -1,3 +1,5 @@
+package com.localassets;
+
 import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -27,9 +29,9 @@ import android.util.Base64;
 
 
 
-public class AssetsLib extends CordovaPlugin {
+public class LocalAssets extends CordovaPlugin {
 
-    public static final String TAG = "Assets Lib";
+    public static final String TAG = "Local Assets";
     public String out = "fail";
 
     public static final String CAMERA_IMAGE_BUCKET_NAME =
@@ -49,7 +51,7 @@ public class AssetsLib extends CordovaPlugin {
     /**
     * Constructor.
     */
-    public AssetsLib() {}
+    public LocalAssets() {}
 
     /**
     * Sets the context of the Command. This can then be used to do things like
@@ -62,7 +64,7 @@ public class AssetsLib extends CordovaPlugin {
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
         context = cordova.getActivity().getApplicationContext();
-        Log.v(TAG,"Init AssetsLib");
+        Log.v(TAG,"Init LocalAssets");
     }
 
     @Override
@@ -91,7 +93,7 @@ public class AssetsLib extends CordovaPlugin {
         else if(action.equals("getPhoto")){
             //final int duration = Toast.LENGTH_SHORT;
             // Shows a toast
-            //Log.v(TAG,"AssetsLib received:"+ "getPhotoMetadata");
+            //Log.v(TAG,"LocalAssets received:"+ "getPhotoMetadata");
 
             //out = args.getJSONArray(0).getString(0);
 
@@ -149,7 +151,7 @@ public class AssetsLib extends CordovaPlugin {
     public boolean getPhotoMetadata(){
      final int duration = Toast.LENGTH_SHORT;
         // Shows a toast
-        Log.v(TAG,"AssetsLib received:"+ "getPhotoMetadata");
+        Log.v(TAG,"LocalAssets received:"+ "getPhotoMetadata");
 
 
         cordova.getActivity().runOnUiThread(new Runnable() {

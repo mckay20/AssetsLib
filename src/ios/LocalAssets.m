@@ -5,7 +5,7 @@
 //
 //
 
-#import "AssetsLib.h"
+#import "LocalAssets.h"
 #import "AssetsLibrary/ALAssetsLibrary.h"
 #import "AssetsLibrary/ALAssetsFilter.h"
 #import "AssetsLibrary/ALAssetsGroup.h"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-		id="com.capdev8.assetslib"
+		id="com.capdev8.localassets"
     	version="0.1.0">
     <name>AssetsLib</name>
     <description>Cordova plugin for accessing assets from iOS and Android</description>
@@ -9,19 +9,19 @@
     <author>glowmar</author>
     <keywords>cordova,phonegap,assets,assetslib,thumbnails</keywords>
 
-    <js-module src="www/assetslib.js" name="AssetsLib">
-        <clobbers target="window.navigator.assetslib" />
+    <js-module src="www/localassets.js" name="LocalAssets">
+        <clobbers target="window.navigator.localassets" />
     </js-module>
     
     <!-- ios -->
     <platform name="ios">    
         <config-file target="config.xml" parent="/*">
-            <feature name="AssetsLib">
-                <param name="ios-package" value="AssetsLib" /> 
+            <feature name="LocalAssets">
+                <param name="ios-package" value="LocalAssets" />
             </feature>
         </config-file>
-        <header-file src="src/ios/AssetsLib.h" />
-        <source-file src="src/ios/AssetsLib.m" />
+        <header-file src="src/ios/LocalAssets.h" />
+        <source-file src="src/ios/LocalAssets.m" />
 
         <framework src="AssetsLibrary.framework"/>
         <framework src="CoreLocation.framework"/>
@@ -30,14 +30,14 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="AssetLib">
-                <param name="android-package" value="com.capdev8.assetslib.AssetsLib" />
+                <param name="android-package" value="com.capdev8.localassets.LocalAssets" />
             </feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
             <feature name="http://api.phonegap.com/1.0/file" />
         </config-file>
-        <source-file src="src/android/AssetsLib.java" target-dir="src/com/assetslib" />
+        <source-file src="src/android/LocalAssets.java" target-dir="src/com/localassets" />
     </platform>
 </plugin>
 
