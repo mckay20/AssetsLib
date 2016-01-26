@@ -3,11 +3,11 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
 		id="com.capdev8.localassets"
     	version="0.1.0">
-    <name>AssetsLib</name>
+    <name>LocalAssets</name>
     <description>Cordova plugin for accessing assets from iOS and Android</description>
     <license>MIT</license>
     <author>glowmar</author>
-    <keywords>cordova,phonegap,assets,assetslib,thumbnails</keywords>
+    <keywords>cordova,phonegap,assets,thumbnails</keywords>
 
     <js-module src="www/localassets.js" name="LocalAssets">
         <clobbers target="window.navigator.localassets" />
@@ -29,7 +29,7 @@
 
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="AssetLib">
+            <feature name="LocalAssets">
                 <param name="android-package" value="com.capdev8.localassets.LocalAssets" />
             </feature>
         </config-file>
