@@ -30,7 +30,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="LocalAssets">
-                <param name="android-package" value="com.capdev8.localassets.LocalAssets" />
+                <param name="android-package" value="com.localassets.LocalAssets" />
             </feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest">
